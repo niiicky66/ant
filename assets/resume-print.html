@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>刘文俊 · 应聘蚂蚁财富海外业务-用户增长运营</title>
+<style>
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-400.woff2') format('woff2');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-500.woff2') format('woff2');
+    font-weight: 500;
+  }
+  :root {
+    --paper:      #F0EEDA;
+    --paper-deep: #E6E2C9;
+    --dust:       #D8D1B3;
+    --ink:        #191F06;
+    --sage:       #5A5F3F;
+    --moss:       #82876A;
+    --rust:       #D33900;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html, body { background: var(--paper); }
+  body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .mono { font-family: 'IBM Plex Mono', 'Microsoft YaHei', monospace; }
+  .rust { color: var(--rust); }
+  b, strong { font-weight: 700; }
+  em { font-style: normal; color: var(--rust); font-weight: 700; }
+
+  .page {
+    width: 210mm; height: 296.5mm;
+    padding: 11mm 13mm 9mm;
+    background: var(--paper);
+    position: relative;
+    display: flex; flex-direction: column;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ---------- header ---------- */
+  .head { display: flex; justify-content: space-between; align-items: flex-start; }
+  .head h1 { font-size: 26pt; font-weight: 700; letter-spacing: 2px; line-height: 1; }
+  .head .contact { text-align: right; font-size: 6.4pt; color: var(--sage); line-height: 1.75; }
+  .head .contact .loc { color: var(--ink); font-weight: 700; font-size: 7pt; }
+  .head .sub { font-size: 8.6pt; font-weight: 700; color: var(--rust); margin-top: 3.2mm; letter-spacing: .5px; }
+  .head .sub .site { font-weight: 400; color: var(--moss); font-size: 6.6pt; margin-left: 2mm; }
+  .headrule { border: 0; border-top: 1.4px solid var(--ink); margin: 2.6mm 0 3mm; }
+
+  /* ---------- intro ---------- */
+  .intro { font-size: 8.3pt; line-height: 1.62; }
+  .callout {
+    margin-top: 2.6mm; padding: 2.4mm 3.2mm;
+    border: 1px solid var(--dust); border-left: 2.5px solid var(--rust);
+    background: var(--paper-deep);
+    font-size: 8.1pt; line-height: 1.6;
+  }
+
+  /* ---------- stats ---------- */
+  .stats { display: flex; gap: 2mm; margin-top: 3.2mm; }
+  .stat {
+    flex: 1; border: 1px solid var(--dust); background: rgba(230,226,201,.5);
+    padding: 2.2mm 0 1.8mm; text-align: center;
+  }
+  .stat .v { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 15pt; color: var(--rust); line-height: 1; }
+  .stat .v small { font-size: 8pt; font-weight: 500; }
+  .stat .c { font-size: 6pt; color: var(--sage); margin-top: 1.4mm; letter-spacing: .3px; }
+
+  /* ---------- sections ---------- */
+  .sec { margin-top: 4.2mm; }
+  .sec-h { display: flex; align-items: baseline; gap: 2.5mm; border-bottom: 1.2px solid var(--ink); padding-bottom: 1.4mm; margin-bottom: 2.6mm; }
+  .sec-h .zh { font-size: 11.5pt; font-weight: 700; letter-spacing: 1.5px; }
+  .sec-h .en { font-family: 'IBM Plex Mono', monospace; font-size: 6.4pt; color: var(--moss); letter-spacing: 1.5px; }
+
+  /* ---------- jobs ---------- */
+  .job { margin-bottom: 3.4mm; }
+  .job:last-child { margin-bottom: 0; }
+  .job-h { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-h .t { font-size: 9pt; font-weight: 700; }
+  .job-h .t .role { color: var(--sage); font-weight: 700; }
+  .job-h .d { font-family: 'IBM Plex Mono', monospace; font-size: 6.6pt; color: var(--moss); }
+  .job .desc { font-size: 7.6pt; color: var(--sage); line-height: 1.55; margin: .9mm 0 .9mm; }
+  .job ul { list-style: none; }
+  .job li { font-size: 7.9pt; line-height: 1.6; padding-left: 4mm; position: relative; }
+  .job li::before { content: "—"; position: absolute; left: 0; color: var(--moss); }
+
+  /* ---------- project cards ---------- */
+  .cards { display: flex; gap: 3.5mm; }
+  .card { flex: 1; border-top: 1.4px solid var(--ink); padding-top: 1.8mm; }
+  .card-h { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5mm; }
+  .card-h .t { font-size: 8.2pt; font-weight: 700; line-height: 1.4; }
+  .card-h .m { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 11.5pt; color: var(--rust); white-space: nowrap; line-height: 1.1; }
+  .card-h .m small { font-size: 6.5pt; }
+  .card p { font-size: 7pt; color: var(--sage); line-height: 1.58; margin-top: 1.2mm; }
+  .tags { margin-top: 1.6mm; display: flex; flex-wrap: wrap; gap: 1.2mm; }
+  .tag { font-family: 'IBM Plex Mono', monospace; font-size: 5.8pt; color: var(--sage); border: 1px solid var(--dust); border-radius: 999px; padding: .5mm 1.8mm; }
+
+  /* ---------- footer ---------- */
+  .foot {
+    margin-top: auto; padding-top: 1.6mm; border-top: 1px solid var(--dust);
+    display: flex; justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace; font-size: 5.8pt; color: var(--moss); letter-spacing: .5px;
+  }
+
+  /* ---------- page 2 ---------- */
+  .pills { display: flex; flex-wrap: wrap; gap: 1.5mm; margin-top: 1.8mm; }
+  .pill { font-family: 'IBM Plex Mono', monospace; font-size: 6pt; color: var(--sage); border: 1px solid var(--dust); padding: .7mm 2.2mm; background: rgba(230,226,201,.5); }
+
+  .work { margin-bottom: 3mm; }
+  .work-h { display: flex; justify-content: space-between; align-items: baseline; }
+  .work-h .t { font-size: 8.6pt; font-weight: 700; }
+  .work-h .tech { font-family: 'IBM Plex Mono', monospace; font-size: 6.2pt; color: var(--moss); }
+  .work p { font-size: 7.7pt; line-height: 1.6; color: var(--ink); margin-top: .8mm; }
+
+  .insight { display: flex; flex-direction: column; gap: 1.6mm; }
+  .insight .row { display: flex; gap: 3mm; align-items: flex-start; }
+  .insight .k { flex: 0 0 24mm; font-size: 7.6pt; font-weight: 700; padding-top: .2mm; }
+  .insight .v { flex: 1; font-size: 7.6pt; line-height: 1.6; color: var(--ink); }
+
+  /* page 2: distribute sections evenly to fill the page */
+  .p2 { justify-content: space-between; }
+  .p2 .sec { margin-top: 0; }
+  .p2 .foot { margin-top: 0; }
+  .p2 .job li, .p2 .insight .v, .p2 .card p { line-height: 1.7; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1.35fr; column-gap: 5mm; row-gap: 4mm; }
+  .sk .sk-h { font-size: 7.8pt; font-weight: 700; border-bottom: 1px solid var(--dust); padding-bottom: 1mm; margin-bottom: 1.4mm; }
+  .sk .sk-h em { font-weight: 700; }
+  .sk ul { list-style: none; }
+  .sk li { font-size: 7pt; color: var(--sage); line-height: 1.75; }
+  .edu { grid-row: 1 / span 2; grid-column: 4; border-left: 1px solid var(--dust); padding-left: 4mm; }
+  .edu .t { font-size: 8.6pt; font-weight: 700; }
+  .edu .d { font-family: 'IBM Plex Mono', monospace; font-size: 6.4pt; color: var(--moss); margin: 1mm 0 1.6mm; }
+  .edu p { font-size: 7.2pt; color: var(--sage); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<!-- ======================= PAGE 1 ======================= -->
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>刘文俊</h1>
+      <div class="sub">整合营销 · 用户增长 · 应聘蚂蚁财富海外业务-用户增长运营</div>
+    </div>
+    <div class="contact mono">
+      <div class="loc">深圳 · Shenzhen</div>
+      <div>136 8950 7461 · 2510520691@qq.com</div>
+      <div>resume.nicky66.top</div>
+    </div>
+  </div>
+  <hr class="headrule">
+
+  <div class="intro">
+    <b>懂增长，也懂投资，做投资者增长。</b>4 年操盘 <em>1400 亿</em>资产、<em>300 万 DAU</em> 的精细化用户增长经验——客群分层 × 权益体系 × 生命周期经营，孵化过会员、召回、定价多条增长路径；加上一套自建、9 年回测验证（超额 <em>+254%</em>）、每日实盘跑单的量化选股系统——我不是在营销投资产品，我在服务和我同类的人。
+  </div>
+
+  <div class="callout">
+    这个岗位需要两种人合体——一个懂<b>「用户分层 × 差异化经营 × 权益体系」</b>、能孵化<b>多条增长路径</b>的操盘手，和一个<span class="rust"><b>自己真的会投资、能与投资者共情</b></span>的人，我恰好两点都占。<b>最好的投资者营销，是先成为投资者。</b>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">+254<small>%</small></div><div class="c">量化 9 年回测超额</div></div>
+    <div class="stat"><div class="v">1400<small>亿</small></div><div class="c">操盘资产规模 AUM</div></div>
+    <div class="stat"><div class="v">300<small>万</small></div><div class="c">大盘日活 DAU</div></div>
+    <div class="stat"><div class="v">100<small>万+</small></div><div class="c">付费会员增长</div></div>
+    <div class="stat"><div class="v">200<small>亿</small></div><div class="c">跨平台召回余额</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="zh">工作经历</span><span class="en">/ EXPERIENCE</span></div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="t">乐信控股 <span class="role">· 消金商业分析师</span></span>
+        <span class="d">2025.04 — 至今</span>
+      </div>
+      <div class="desc">主导 500 万存量用户运营与 800 亿资产规模的增长策略设计——分层差异化经营 / 智能定价 / 生命周期管理，以数据驱动用户活跃与业务深度同步增长。</div>
+      <ul>
+        <li>搭建「响应 × 竞争」双因子用户分层体系，按层设计差异化经营手段与触达策略，单客利润产出 <em>+25%</em></li>
+        <li>以 Uplift 因果建模区分自然转化与营销拉动，预算只投给高弹性人群，提升营销 ROI</li>
+        <li>组合视角再平衡 800 亿资产结构，大盘久期压降 <em>23%</em>；0→1 孵化「乐周转」小微产品，四维定价矩阵驱动放款 <em>+19%</em>——为大盘孵化出新的增长路径</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="t">招联消费金融 <span class="role">· 用户策略运营</span></span>
+        <span class="d">2022.07 — 2025.04</span>
+      </div>
+      <div class="desc">负责 6000 万用户增长与 1400 亿规模管理——会员权益体系、沉睡召回、跨平台份额竞争与全链路转化，跑通多条可复用的用户增长路径。</div>
+      <ul>
+        <li>0→1 搭建「微光卡」付费会员权益体系（金融 + 非金融权益组合），付费会员破<em>百万</em>、年化创收 <em>1.5 亿</em></li>
+        <li>牵头沉睡高优用户跨平台召回，以份额抢夺定价击穿竞品心智、引导用户「搬家」，累计撬动在贷余额 <em>200 亿</em></li>
+        <li>实时议价 + 断点拦截优化核心转化链路，断点营销响应率绝对 <em>+20%</em></li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="t">腾讯广告 <span class="role">· 商业化策略运营（实习）</span></span>
+        <span class="d">2021.07 — 2022.07</span>
+      </div>
+      <div class="desc">站在广告平台端做渠道化获客与流量分发——公众号 / 视频号 / 企微各渠道的人群、内容形态与转化路径不同，一渠一策做创意与分发适配，再以私域沉淀长效关系。</div>
+      <ul>
+        <li>从渠道、形式与内容适配性出发优化电商广告分发策略，流量变现效率 <em>+18%</em></li>
+        <li>在公众号（头条 / 二条）、视频号、企业微信搭建私域经营，沉淀高价值人群、放大广告长效价值</li>
+        <li>搭建核心节点埋点、广告归因与数据看板，监控场内流量矩阵，专题挖掘留存转化核心因子</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="t">腾讯科技 <span class="role">· 搜索策略产品（实习）</span></span>
+        <span class="d">2020.07 — 2021.07</span>
+      </div>
+      <div class="desc">参与搜索 / 信息流场景的商业化流量分发与转化调优——理解「平台如何把流量分配给内容」的机制，正是今天做内容获客与投流优化的另一面。</div>
+      <ul>
+        <li>引入用户历史偏好与实时上下文，配合算法团队调优 CTR 预估模型，大盘整体 CTR <em>+15%</em></li>
+        <li>主导 A/B 实验设计与漏斗归因，在变现效率与用户体验间求平衡，曝光到点击转化率绝对 <em>+2-3%</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="zh">精选项目 · 获客与增长</span><span class="en">/ KEY PROJECTS · ACQUISITION &amp; GROWTH</span></div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-h">
+          <span class="t">电商广告<span class="rust">渠道化获客</span></span>
+          <span class="m">+18<small>%</small></span>
+        </div>
+        <p>按渠道人群与内容形态做差异化创意与流量分发，一渠一策；公域获客 × 私域沉淀长效经营——与海外在 YouTube / TradingView / Google 投流获客是同一套底层逻辑。</p>
+        <div class="tags"><span class="tag">渠道获客</span><span class="tag">内容适配</span><span class="tag">私域</span></div>
+      </div>
+      <div class="card">
+        <div class="card-h">
+          <span class="t">沉睡高优用户<span class="rust">跨平台召回</span></span>
+          <span class="m">200<small>亿</small></span>
+        </div>
+        <p>Uplift Model 定位「能被召回的人」，份额抢夺定价击穿竞品心智、引导用户搬家，渐进式回调无感回收利润——一套完整的竞品份额抢夺增长闭环。</p>
+        <div class="tags"><span class="tag">份额抢夺</span><span class="tag">召回</span><span class="tag">增长路径</span></div>
+      </div>
+      <div class="card">
+        <div class="card-h">
+          <span class="t">会员<span class="rust">权益体系</span>百万级增长</span>
+          <span class="m">100<small>万+</small></span>
+        </div>
+        <p>RFM × LTV 双轴识别高价值用户，设计会员等级 / 权益组合 / 商业化闭环，头部用户次月留存 +35%、月均复购 +1.5 倍——直接对标财富平台的权益体系与分层经营。</p>
+        <div class="tags"><span class="tag">权益体系</span><span class="tag">分层经营</span><span class="tag">LTV</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>刘文俊 · 应聘蚂蚁财富海外业务-用户增长运营</span>
+    <span>2510520691@QQ.COM · RESUME.NICKY66.TOP</span>
+  </div>
+</div>
+
+<!-- ======================= PAGE 2 ======================= -->
+<div class="page p2">
+  <div class="sec" style="margin-top:0">
+    <div class="sec-h"><span class="zh">自主投资 · 量化项目</span><span class="en">/ INDEPENDENT INVESTING</span></div>
+    <div class="job">
+      <div class="job-h">
+        <span class="t">A 股月度波段 量化选股模型 <span class="role">· 独立开发</span></span>
+        <span class="d">2025 — 每日实盘跑单</span>
+      </div>
+      <div class="desc">8 年+ 自主投资经验，独立做出选股决策，对基本面与技术面都有实操理解——我自己就是财富平台最想服务的「进阶投资者」：懂他们怎么选股、怎么扛回撤、在哪个决策点会犹豫。</div>
+      <ul>
+        <li>双层模型：基本面因子（ROE 环比、现金流质量、营收加速）选股 + 20 日量价择时 + 「趋势 × 恐慌 × 回撤」三重风控仓位</li>
+        <li>9 年回测（2017–2026）超额 <em>+254%</em>、夏普 <em>1.08</em>、最大回撤仅 <em>-14.4%</em>（含交易成本税后仍 +211.5%）</li>
+        <li>全链路自建：数仓 / 因子 / 训练 / 选股报告 / 每日盯盘告警，无人值守运行、每笔决策可追溯——完整策略逻辑与回测曲线见后附附件</li>
+      </ul>
+      <div class="pills">
+        <span class="pill">LightGBM · 21 因子</span><span class="pill">量价择时</span><span class="pill">GTO / Kelly 仓位</span><span class="pill">DuckDB · Parquet 数仓</span><span class="pill">每日自动化调度</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="zh">精选项目 · 数据与内容</span><span class="en">/ KEY PROJECTS · DATA &amp; CONTENT</span></div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-h">
+          <span class="t">用户<span class="rust">分层经营</span>体系重构</span>
+          <span class="m">+25<small>%</small></span>
+        </div>
+        <p>归并 60+ 用户标签，以「响应 × 竞争」双因子重构四层动态分层，每层对应独立的定价、权益与触达策略——不同分层用户差异化需求的经营基建，单客利润产出 +25%。</p>
+        <div class="tags"><span class="tag">用户分层</span><span class="tag">差异化经营</span><span class="tag">建模</span></div>
+      </div>
+      <div class="card">
+        <div class="card-h">
+          <span class="t">实时行情数仓 + <span class="rust">盘口告警</span></span>
+          <span class="m">10<small>类</small></span>
+        </div>
+        <p>规则自动识别放量 / 异动 / 资金流突变，秒级推送：什么信号、什么时点、推给什么人——换个数据源就是入金掉头 / 交易骤降 / 用户沉睡的实时预警，财富平台提升活跃与业务深度的触达引擎。</p>
+        <div class="tags"><span class="tag">活跃触达</span><span class="tag">数据敏感</span><span class="tag">工程落地</span></div>
+      </div>
+      <div class="card">
+        <div class="card-h">
+          <span class="t">财经资讯聚合 + <span class="rust">AI 摘要</span></span>
+          <span class="m">24<small>h</small></span>
+        </div>
+        <p>财联社 / Bloomberg 一手快讯，多模型 AI 做因果关联与板块共振分析，产出研报式解读——一条自动化的投资者内容生产线，海外 KOL·KOC 合作与社区 UGC 的内容燃料。</p>
+        <div class="tags"><span class="tag">内容获客</span><span class="tag">AI 生产线</span><span class="tag">社区 UGC</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="zh">海外获客 · 行业认知</span><span class="en">/ MARKET PERSPECTIVE</span></div>
+    <div class="insight">
+      <div class="row">
+        <span class="k rust">竞品获客模式</span>
+        <span class="v">海外券商 / 财富平台的新客主要来自 <b>YouTube · TradingView · Facebook / Google 投流 + KOL·KOC 内容</b>——渠道人群与内容形态决定转化路径，拉新必须一渠一策。这与我在腾讯广告端做渠道化分发、在消金跨平台抢份额，是同一套底层逻辑。</span>
+      </div>
+      <div class="row">
+        <span class="k rust">客群定位差异</span>
+        <span class="v">Robinhood 以零佣金抓大众交易用户；富途 moomoo 以期权链、进阶行情工具服务<b>进阶投资者</b>——客群定位不同，获客素材、权益钩子与经营深度就完全不同。做海外增长，第一道题是「服务哪一层投资者、用什么权益承接」。</span>
+      </div>
+      <div class="row">
+        <span class="k rust">方法论迁移</span>
+        <span class="v">把「入金 / 申购 / 持仓 / 活跃」当作生息资产来经营——<b>客群分层 × 权益体系 × 生命周期</b>的精细化打法完全复用，从拉新到留存的全链路我都从 0 到 1 跑通过，且有可量化的结果。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="zh">技能 · 教育</span><span class="en">/ SKILLS &amp; EDUCATION</span></div>
+    <div class="grid">
+      <div class="sk">
+        <div class="sk-h">投资<em>分析</em></div>
+        <ul><li>基本面分析</li><li>技术面 / 量价</li><li>量化选股建模</li><li>组合与风险控制</li></ul>
+      </div>
+      <div class="sk">
+        <div class="sk-h">增长<em>营销</em></div>
+        <ul><li>整合营销策略</li><li>渠道化获客拉新</li><li>内容 / KOL 营销</li><li>会员权益商业化</li></ul>
+      </div>
+      <div class="sk">
+        <div class="sk-h">数据<em>分析</em></div>
+        <ul><li>SQL · Presto / Spark</li><li>Python 建模</li><li>A/B 实验设计</li><li>Uplift / 因果推断</li></ul>
+      </div>
+      <div class="edu">
+        <div class="t">深圳大学 · 工商管理 本科</div>
+        <div class="d">2018 — 2022</div>
+        <p>主修商业数据分析、运筹学、市场营销学与概率统计——量化决策的底层功底由此打下。CET-6，可作书面工作语言，海外市场资料读写与沟通无碍。</p>
+      </div>
+      <div class="sk">
+        <div class="sk-h">用户<em>运营</em></div>
+        <ul><li>用户生命周期管理</li><li>RFM / 分层模型</li><li>断点漏斗分析</li><li>LTV 提升策略</li></ul>
+      </div>
+      <div class="sk">
+        <div class="sk-h">工程<em>落地</em></div>
+        <ul><li>数据仓库 DuckDB</li><li>FastAPI 后端</li><li>实时告警系统</li><li>全栈部署运维</li></ul>
+      </div>
+      <div class="sk">
+        <div class="sk-h">语言<em>能力</em></div>
+        <ul><li>普通话 · 粤语（母语）</li><li>英语 CET-6</li><li>书面工作语言</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>刘文俊 · 应聘蚂蚁财富海外业务-用户增长运营</span>
+    <span>2510520691@QQ.COM · RESUME.NICKY66.TOP</span>
+  </div>
+</div>
+
+</body>
+</html>
